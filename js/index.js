@@ -1,13 +1,10 @@
-// const moneyInput = document.querySelector("#countOfMoney"),
-// tipInput = document.querySelector("#custom"),
 const inputs = document.querySelectorAll(".inputs"),
   _tips = document.querySelectorAll(".tip-container__tip:not(:last-child)"),
   tipsTabs = Array.from(_tips),
   perPersonElem = document.querySelector(".perPerson"),
   totalElem = document.querySelector(".total"),
-  resetBtn = document.querySelector(".tip-container__button");
-
-const regEx = /^\d+$/;
+  resetBtn = document.querySelector(".tip-container__button"),
+  regEx = /^\d+$/;
 
 let tipCount = getTipValue();
 
@@ -82,10 +79,11 @@ function validateInputs(input) {
 
 inputs.forEach((input) => {
   input.addEventListener("input", () => {
-    if (checkInputs()) {
+    if (checkInputsForEmpty()) {
       clearResult();
       return;
     }
+
     if (input.classList.contains("custom-input")) {
       tipCount = getTipValue();
       printResult();
@@ -97,7 +95,7 @@ inputs.forEach((input) => {
 });
 
 function printResult() {
-  if (checkInputs()) return;
+  if (checkInputsForEmpty()) return;
 
   const money = +inputs[0].value;
   const people = +inputs[2].value;
@@ -105,12 +103,13 @@ function printResult() {
   perPersonElem.textContent = `$${calcTipPerPerson(money, tipCount, people)}`;
   totalElem.textContent = `$${calcTotalTip(money, tipCount)}`;
 }
+
 function clearResult() {
   perPersonElem.textContent = `$0.00`;
   totalElem.textContent = `$0.00`;
 }
 
-function checkInputs() {
+function checkInputsForEmpty() {
   let isEmpty = false;
 
   inputs.forEach((input, id) => {
@@ -148,6 +147,7 @@ function calcTipPerPerson(sum, percent, numOfPeople) {
   res /= numOfPeople;
   return res.toFixed(2);
 }
+
 function calcTotalTip(sum, percent) {
   const res = (sum * percent) / 100;
 
