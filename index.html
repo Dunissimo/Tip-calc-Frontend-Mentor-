@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        padding: 20px 0;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main-container">
+      <div class="main-container__title">
+        <h1>SPLITTER</h1>
+      </div>
+      <div class="tip-container">
+        <div class="tip-container__inputs">
+          <div class="top">
+            <form action="post" class="tip-container__form">
+              <label for="countOfMoney">
+                <h2>Bill</h2>
+                <img
+                  class="input-icon"
+                  src="./images/icon-dollar.svg"
+                  alt="dollar"
+                />
+                <input
+                  placeholder="0"
+                  autocomplete="off"
+                  class="tip-container__input input inputs"
+                  type="text"
+                  name="countOfMoney"
+                  id="countOfMoney"
+                />
+              </label>
+            </form>
+          </div>
+          <div class="tip-container__select-tip">
+            <h2>Select Tip %</h2>
+            <div class="tip-container__tips">
+              <div class="grid">
+                <div class="tip-container__tip" data-tip-count="5">
+                  <span>5%</span>
+                </div>
+                <div class="tip-container__tip" data-tip-count="10">
+                  <span>10%</span>
+                </div>
+                <div
+                  class="tip-container__tip tip-container__tip_active"
+                  data-tip-count="15"
+                >
+                  <span>15%</span>
+                </div>
+                <div class="tip-container__tip" data-tip-count="25">
+                  <span>25%</span>
+                </div>
+                <div class="tip-container__tip" data-tip-count="50">
+                  <span>50%</span>
+                </div>
+                <div class="tip-container__tip tip-container__tip_input">
+                  <input
+                    class="custom-input inputs"
+                    placeholder="Custom"
+                    type="text"
+                    name="custom"
+                    id="custom"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <form action="post" class="tip-container__form">
+            <label for="countOfMoney">
+              <h2>Number of People</h2>
+              <img
+                class="input-icon"
+                src="./images/icon-person.svg"
+                alt="person"
+              />
+              <input
+                placeholder="0"
+                class="tip-container__input input inputs"
+                type="text"
+                name="countOfPeople"
+                id="countOfPeople"
+                autocomplete="off"
+              />
+            </label>
+          </form>
+        </div>
+        <div class="tip-container__result">
+          <div class="tip-container__price">
+            <div class="tip-container__amount">
+              <div class="tip-container__text">
+                <h2>Tip Amount</h2>
+                <p>/ person</p>
+              </div>
+              <span class="money perPerson">$0.00</span>
+            </div>
+            <div class="tip-container__total">
+              <div class="tip-container__text">
+                <h2>Total</h2>
+              </div>
+              <span class="money total">$0.00</span>
+            </div>
+          </div>
+          <button class="tip-container__button" type="button">RESET</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a target="_blank" href="https://github.com/Dunissimo">Dunissimo</a>.
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

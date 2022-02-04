@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+// colors
+
+$cyan: hsl(172, 67%, 45%);
+
+$dark-cyan: hsl(183, 100%, 15%);
+
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$super-light-cyan: hsl(180, 12%, 92%);
+$white: hsl(0, 0%, 100%);
+
+// typography
+
+$fz-inputs: 24px;
+$family: "Space Mono", monospace;
+
+// styles
+
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  font-family: $family;
+}
+
+.main-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $light-grayish-cyan;
+
+  &__title {
+    width: 100px;
+    opacity: 0.6;
+
+    margin-bottom: 5rem;
+
+    letter-spacing: 0.5rem;
+    font-weight: 700;
+    font-size: 24px;
+
+    overflow-wrap: anywhere;
+  }
+}
+
+.tip-container {
+  width: 70%;
+  height: 400px;
+  max-width: 900px;
+  min-height: 400px;
+
+  padding: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 1.5rem;
+
+  background-color: $white;
+
+  &__inputs {
+    width: 50%;
+    height: 100%;
+
+    padding: 1rem;
+
+    margin-right: 1rem;
+
+    color: $dark-cyan;
+
+    border-radius: 1.5rem;
+
+    .input {
+      width: 85%;
+      height: 40px;
+
+      text-align: right;
+      font-family: $family;
+      font-weight: 700;
+      color: $dark-cyan;
+      font-size: $fz-inputs;
+
+      position: relative;
+
+      margin: 1rem 0 3rem 0;
+      padding: 5px 30px;
+
+      border: none;
+      border-radius: 5px;
+      background-color: $super-light-cyan;
+
+      &:focus {
+        outline-color: $cyan;
+      }
+    }
+  }
+  &__select-tip {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 0.5fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+      margin: 1rem 0 2rem 0;
+    }
+  }
+  &__tip {
+    width: 70px;
+    height: auto;
+
+    padding: 7px 20px;
+
+    text-align: center;
+    color: $white;
+    font-size: $fz-inputs;
+    font-weight: 700;
+    cursor: pointer;
+
+    background-color: $dark-cyan;
+    border-radius: 5px;
+
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: $cyan;
+    }
+    &_active {
+      background-color: $cyan;
+    }
+  }
+  &__tip_input {
+    width: 70px;
+    height: 100%;
+
+    padding: 0;
+
+    background-color: $light-grayish-cyan;
+
+    & > input {
+      width: 130%;
+      height: 55%;
+
+      padding: 10px;
+
+      color: $dark-cyan;
+      font-weight: 700;
+      text-align: center;
+      font-size: 20px;
+
+      border: none;
+      background-color: $super-light-cyan;
+    }
+
+    & > input:focus {
+      outline-color: $cyan;
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    .input-icon {
+      position: absolute;
+      top: 50px;
+      left: 15px;
+      z-index: 1000;
+    }
+  }
+
+  &__result {
+    width: 50%;
+    height: 100%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 1.5rem;
+    background-color: $dark-cyan;
+  }
+  &__amount,
+  &__total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    .money {
+      font-size: 48px;
+      color: $cyan;
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    color: $super-light-cyan;
+    font-weight: 700;
+    p {
+      margin-top: 0.5rem;
+
+      color: $dark-grayish-cyan;
+    }
+  }
+
+  &__button {
+    width: 80%;
+    height: 45px;
+
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+
+    border-radius: 5px;
+    background-color: $cyan;
+    border: none;
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $light-grayish-cyan;
+    }
+    &:disabled {
+      background-color: $dark-grayish-cyan;
+      // border: 1px solid red;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    height: auto;
+    overflow-y: visible;
+  }
+  .main-container {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .tip-container {
+    height: auto;
+    display: block;
+    .top {
+      width: 100%;
+      display: flex;
+    }
+    &__form {
+      width: 100%;
+    }
+    &__inputs {
+      width: 100%;
+      margin-right: 0;
+    }
+    &__result {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    width: 100%;
+  }
+  .main-container__title {
+    padding: 25px 0 0 0;
+  }
+  .tip-container {
+    width: 80%;
+    &__inputs,
+    &__result {
+      padding: 0;
+    }
+    &__inputs .input {
+      width: 80%;
+    }
+    &__result {
+      width: 100%;
+    }
+    &__amount,
+    &__total {
+      display: block;
+    }
+    &__amount > &__text,
+    &__total > &__text {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      p {
+        margin: 0;
+        margin-left: 1rem;
+      }
+    }
+
+    &__tips {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+    }
+  }
+}

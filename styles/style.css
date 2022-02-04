@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Space Mono", monospace;
+}
+
+.main-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c5e4e7;
+}
+
+.main-container__title {
+  width: 100px;
+  opacity: 0.6;
+  margin-bottom: 5rem;
+  letter-spacing: 0.5rem;
+  font-weight: 700;
+  font-size: 24px;
+  overflow-wrap: anywhere;
+}
+
+.tip-container {
+  width: 70%;
+  height: 400px;
+  max-width: 900px;
+  min-height: 400px;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1.5rem;
+  background-color: white;
+}
+
+.tip-container__inputs {
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  margin-right: 1rem;
+  color: #00494d;
+  border-radius: 1.5rem;
+}
+
+.tip-container__inputs .input {
+  width: 85%;
+  height: 40px;
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: #00494d;
+  font-size: 24px;
+  position: relative;
+  margin: 1rem 0 3rem 0;
+  padding: 5px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e8eded;
+}
+
+.tip-container__inputs .input:focus {
+  outline-color: #26c0ab;
+}
+
+.tip-container__select-tip .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.5fr)[3];
+      grid-template-columns: repeat(3, 0.5fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  margin: 1rem 0 2rem 0;
+}
+
+.tip-container__tip {
+  width: 70px;
+  height: auto;
+  padding: 7px 20px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #00494d;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.tip-container__tip:hover {
+  background-color: #26c0ab;
+}
+
+.tip-container__tip_active {
+  background-color: #26c0ab;
+}
+
+.tip-container__tip_input {
+  width: 70px;
+  height: 100%;
+  padding: 0;
+  background-color: #c5e4e7;
+}
+
+.tip-container__tip_input > input {
+  width: 130%;
+  height: 55%;
+  padding: 10px;
+  color: #00494d;
+  font-weight: 700;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  background-color: #e8eded;
+}
+
+.tip-container__tip_input > input:focus {
+  outline-color: #26c0ab;
+}
+
+.tip-container__form {
+  position: relative;
+}
+
+.tip-container__form .input-icon {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  z-index: 1000;
+}
+
+.tip-container__result {
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 1.5rem;
+  background-color: #00494d;
+}
+
+.tip-container__amount, .tip-container__total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+}
+
+.tip-container__amount .money, .tip-container__total .money {
+  font-size: 48px;
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+.tip-container__text {
+  color: #e8eded;
+  font-weight: 700;
+}
+
+.tip-container__text p {
+  margin-top: 0.5rem;
+  color: #5e7a7d;
+}
+
+.tip-container__button {
+  width: 80%;
+  height: 45px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  background-color: #26c0ab;
+  border: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tip-container__button:hover {
+  background-color: #c5e4e7;
+}
+
+.tip-container__button:disabled {
+  background-color: #5e7a7d;
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    height: auto;
+    overflow-y: visible;
+  }
+  .main-container {
+    height: auto;
+    padding-bottom: 1rem;
+  }
+  .tip-container {
+    height: auto;
+    display: block;
+  }
+  .tip-container .top {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .tip-container__form {
+    width: 100%;
+  }
+  .tip-container__inputs {
+    width: 100%;
+    margin-right: 0;
+  }
+  .tip-container__result {
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    width: 100%;
+  }
+  .main-container__title {
+    padding: 25px 0 0 0;
+  }
+  .tip-container {
+    width: 80%;
+  }
+  .tip-container__inputs, .tip-container__result {
+    padding: 0;
+  }
+  .tip-container__inputs .input {
+    width: 80%;
+  }
+  .tip-container__result {
+    width: 100%;
+  }
+  .tip-container__amount, .tip-container__total {
+    display: block;
+  }
+  .tip-container__amount > .tip-container__text,
+  .tip-container__total > .tip-container__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1rem;
+  }
+  .tip-container__amount > .tip-container__text p,
+  .tip-container__total > .tip-container__text p {
+    margin: 0;
+    margin-left: 1rem;
+  }
+  .tip-container__tips {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .tip-container__tips .grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+}
+/*# sourceMappingURL=style.css.map */
