@@ -17,14 +17,14 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #c5e4e7;
 }
 
@@ -48,11 +48,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border-radius: 1.5rem;
   background-color: white;
 }
@@ -89,10 +89,6 @@ body {
 .tip-container__select-tip .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (0.5fr)[3];
-      grid-template-columns: repeat(3, 0.5fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   margin: 1rem 0 2rem 0;
@@ -164,29 +160,31 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-radius: 1.5rem;
   background-color: #00494d;
 }
 
-.tip-container__amount, .tip-container__total {
+.tip-container__amount,
+.tip-container__total {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 20px;
 }
 
-.tip-container__amount .money, .tip-container__total .money {
+.tip-container__amount .money,
+.tip-container__total .money {
   font-size: 48px;
   color: #26c0ab;
   font-weight: 700;
@@ -264,7 +262,8 @@ body {
   .tip-container {
     width: 80%;
   }
-  .tip-container__inputs, .tip-container__result {
+  .tip-container__inputs,
+  .tip-container__result {
     padding: 0;
   }
   .tip-container__inputs .input {
@@ -273,7 +272,8 @@ body {
   .tip-container__result {
     width: 100%;
   }
-  .tip-container__amount, .tip-container__total {
+  .tip-container__amount,
+  .tip-container__total {
     display: block;
   }
   .tip-container__amount > .tip-container__text,
@@ -282,8 +282,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-bottom: 1rem;
   }
   .tip-container__amount > .tip-container__text p,
@@ -297,17 +297,15 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .tip-container__tips .grid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,7 @@
 const inputs = document.querySelectorAll(".inputs"),
-  _tips = document.querySelectorAll(".tip-container__tip:not(:last-child)"),
-  tipsTabs = Array.from(_tips),
+  tipsTabs = Array.from(
+    document.querySelectorAll(".tip-container__tip:not(:last-child)")
+  ),
   perPersonElem = document.querySelector(".perPerson"),
   totalElem = document.querySelector(".total"),
   resetBtn = document.querySelector(".tip-container__button"),
@@ -63,7 +64,7 @@ function validateInputs(input) {
     input.value = input.value.replace(/[^\d]/g, "");
 
     if (input.value < 0) input.value = 1;
-    if (input.value > 15 || input.value.length > 2) input.value = 15;
+    if (input.value > 50 || input.value.length > 2) input.value = 50;
 
     return;
   }
