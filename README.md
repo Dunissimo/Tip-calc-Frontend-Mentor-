@@ -1,4 +1,4 @@
-# Что то случилось с package.json. Увидел это спустя 7 месяцев =(
+# [See my work](https://dunissimo.github.io/Tip-calc_Frontend-Mentor/) | [Результат](https://dunissimo.github.io/Tip-calc_Frontend-Mentor/)
 
 # Frontend Mentor - Tip calculator app solution
 
